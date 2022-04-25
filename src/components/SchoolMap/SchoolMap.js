@@ -1,26 +1,22 @@
 import { YMaps, Map, Placemark } from 'react-yandex-maps';
 import './SchoolMap.css';
 
-function SchoolMap() {
+function SchoolMap({ coordinates }) {
   const mapData = {
     center: [55.159901, 61.402547],
-    zoom: 9,
+    zoom: 11,
   };
 
-  const coordinates = [
-    [55.155489, 61.388414],
-    [55.168079, 61.371804],
-  ];
+  const coordinatesProcessing = (coordinatesData) => {
+    const coorArr = coordinatesData.split(', ');
+    return [Number(coorArr[0]), Number(coorArr[1])];
+  };
 
   return (
     <YMaps>
-      <div>
-        <Map defaultState={mapData} width={500} height={500}>
-          {coordinates.map((coordinate, i) => (
-            <Placemark key={i} geometry={coordinate} />
-          ))}
-        </Map>
-      </div>
+      <Map defaultState={mapData} width={500} height={500}>
+        <Placemark geometry={coordinatesProcessing(coordinates)} />
+      </Map>
     </YMaps>
   );
 }

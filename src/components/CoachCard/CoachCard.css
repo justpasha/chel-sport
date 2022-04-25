@@ -2,11 +2,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 22px 10px;
-  transition: background-color 0.65s;
 }
 
-.coach:hover {
+.coach__button {
+  padding: 22px 10px;
+  background-color: inherit;
+  transition: background-color 0.65s;
+  border: none;
+}
+
+.coach__button:hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 5px;
