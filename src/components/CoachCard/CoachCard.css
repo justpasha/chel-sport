@@ -1,0 +1,31 @@
+.coach {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 22px 10px;
+  transition: background-color 0.65s;
+}
+
+.coach:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+
+.coach__image {
+  width: 146px;
+  height: 146px;
+  border-radius: 100px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.coach__name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: #0994F9;
+  margin: 10px 0 0;
+  max-width: 170px;
+}

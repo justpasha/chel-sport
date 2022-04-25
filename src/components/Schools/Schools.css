@@ -1,0 +1,22 @@
+.schools {
+  width: 100%;
+  background: #F0F0F0;
+}
+
+.schools__container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 55px 70px 45px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.schools__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.2;
+  color: #000000;
+  margin: 0 0 35px;
+}
+

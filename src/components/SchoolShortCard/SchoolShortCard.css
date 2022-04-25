@@ -1,0 +1,101 @@
+.school-card {
+  background: #FFFFFF;
+  border-radius: 8px;
+  display: flex;
+}
+
+.school-card__school-link {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  transition: opacity 0.25s;
+}
+
+.school-card__school-link_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.school-card__school-link:hover {
+  opacity: 0.9;
+}
+
+.school-card__photo {
+  width: 445px;
+  height: 293px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px 0 0 8px;
+}
+
+.school-card__info-container {
+  padding: 20px;
+  max-width: 655px;
+  width: 100%;
+  position: relative;
+}
+
+.school-card__title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.08;
+  margin: 0 0 37px;
+}
+
+.school-card__link {
+  position: absolute;
+  top: 52px;
+  left: 20px;
+  display: block;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.25;
+  color: #0195FF;
+  transition: opacity 0.25s;
+}
+
+.school-card__link:hover {
+  opacity: 0.7;
+}
+
+.school-card__text {
+  margin: 0 0 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.school-card__text:last-of-type {
+  margin-bottom: 0;
+}
+
+.school-card__text_description {
+  overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+}
+
+.school-card__button {
+  display: block;
+  border: none;
+  padding: 10px 0;
+  background: #0468FF;
+  border-radius: 8px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.05;
+  color: #FFFFFF;
+  text-align: center;
+  transition: opacity 0.25s;
+  margin-top: 48px;
+}
+
+.school-card__button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}

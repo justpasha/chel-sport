@@ -1,0 +1,111 @@
+.search-form {
+  width: 100%;
+  background: url('../../images/main-photo.jpg') no-repeat center;
+}
+
+.search-form_schools {
+  background-image: url('../../images/main-photo-schools.jpg');
+}
+
+.search-form__form {
+  max-width: 1280px;
+  width: 100%;
+  padding: 35px 70px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.search-form__form_main {
+  padding: 108px 70px 146px;
+}
+
+.search-form__title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.2;
+  color: #FFFFFF;
+  margin: 0 0 26px;
+}
+
+.search-form__input-container {
+  display: flex;
+}
+
+.search-form__input {
+  width: 100%;
+  padding: 20px 5px 20px 10px;
+  border: none;
+  font-size: 14px;
+  line-height: 1.08;
+  color: #000000;
+  box-sizing: border-box;
+}
+
+.search-form__input:focus {
+  outline: none;
+}
+
+.search-form__input_text {
+  max-width: 624px;
+  border-radius: 0 8px 8px 0;
+  border-left: 1px solid rgb(204, 204, 204);
+}
+
+.search-form__input_text::placeholder {
+  color: #a0a0a0;
+}
+
+.search-form__input_select {
+  max-width: 260px;
+  transition: background 0.25s;
+}
+
+.search-form__input_select:hover {
+  cursor: pointer;
+  background: #eaf0f9;
+}
+
+.search-form__input_select_sport {
+  border-radius: 8px 0 0 8px;
+  border-right: 1px solid rgb(204, 204, 204);
+}
+
+.search-form__button-container {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 400px;
+  margin-left: auto;
+  margin-top: 12px;
+}
+
+.search-form__button {
+  border: none;
+  margin: 0;
+  background: #0468FF;
+  padding: 14px 35px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 17px;
+  color: #FFFFFF;
+  display: block;
+  transition: background 0.25s;
+}
+
+.search-form__button:hover {
+  background: #1472fe;
+  cursor: pointer;
+}
+
+.search-form__button_search {
+  text-decoration: none;
+  margin-right: 20px;
+  background: #FFFFFF;
+  font-weight: 400;
+  color: #000000;
+}
+
+.search-form__button_search:hover {
+  background: #eaf0f9;
+}

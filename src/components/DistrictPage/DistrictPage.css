@@ -1,0 +1,19 @@
+.district-page {
+  background: #F0F0F0;
+}
+
+.district-page__container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 55px 70px 45px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.district-page__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.3;
+  margin: 0 0 35px;
+}
