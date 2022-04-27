@@ -5,32 +5,47 @@ import CoachPopup from '../CoachPopup/CoachPopup';
 import SchoolMap from '../SchoolMap/SchoolMap';
 import './SchoolPage.css';
 
-function SchoolPage({ onGetServerData, onFindDistrict }) {
+function SchoolPage({
+  onFindDistrict,
+  schools,
+  districts,
+  coaches,
+  onFindCoach,
+}) {
   const [isCoachPopupOpen, setIsCoachPopupOpen] = useState(false);
   const [schoolData, setSchoolData] = useState({});
   const [districtInfo, setDistrictInfo] = useState({});
-  const [coaches, setCoaches] = useState([]);
+  const [coachesData, setCoachesData] = useState([]);
+  const [popupContent, setPopupContent] = useState({
+    name: '',
+    photo: '',
+    description: '',
+  });
 
   let { id } = useParams();
 
   useEffect(() => {
-    const data = onGetServerData();
-    const school = data.schoolsData.schools.find(
-      (s) => s.id.toString() === id.toString()
-    );
+    if (districts.length < 1) {
+      return;
+    }
+    const school = schools.find((s) => s.id.toString() === id.toString());
 
-    setDistrictInfo(
-      onFindDistrict(data.districtsData.districts, school.district_id)
-    );
+    getCoaches();
+    setDistrictInfo(onFindDistrict(districts, school.district_id));
     setSchoolData(school);
-  }, []);
+  }, [districts, coaches]);
 
   function togglePopup() {
     setIsCoachPopupOpen(!isCoachPopupOpen);
   }
 
-  function openPopup() {
-    togglePopup();
+  function handleOpenPopup(name, photo, description) {
+    setPopupContent({ name, photo, description });
+  }
+
+  function getCoaches() {
+    if (coaches.length < 1) return;
+    setCoachesData(onFindCoach(coaches, id));
   }
 
   return (
@@ -51,25 +66,37 @@ function SchoolPage({ onGetServerData, onFindDistrict }) {
             <p className="school__text">{schoolData.tel}</p>
           </div>
           <div
-          // className={`school__coach-container ${
-          //   coaches.length > 0 ? 'school__coach-container_hidden' : ''
-          // }`}
+            className={`school__coach-container ${
+              coachesData.length > 0 ? 'school__coach-container_hidden' : ''
+            }`}
           >
             <h3 className="school__coach-title">Некоторые тренеры</h3>
-            {/* {coaches.map((coach) => (
-              <CoachCard key={coach.id} />
-            ))} */}
-            <CoachCard togglePopup={togglePopup} />
+            {coachesData.map((coach) => (
+              <CoachCard
+                key={coach.id}
+                coachData={coach}
+                onPopupOpen={handleOpenPopup}
+                togglePopup={togglePopup}
+              />
+            ))}
           </div>
         </div>
         <section className="school__map-container">
           <h3 className="school__map-title">Местонахождение на карте</h3>
           <div className="school__map">
-            <SchoolMap coordinates={'55.155489, 61.388414'} />
+            {schoolData.coordinates ? (
+              <SchoolMap coordinates={schoolData.coordinates} />
+            ) : (
+              ''
+            )}
           </div>
         </section>
       </div>
-      <CoachPopup isOpen={isCoachPopupOpen} onClose={togglePopup} />
+      <CoachPopup
+        popupContent={popupContent}
+        isOpen={isCoachPopupOpen}
+        onClose={togglePopup}
+      />
     </section>
   );
 }

@@ -5,32 +5,39 @@ import SchoolList from '../SchoolList/SchoolList';
 import SchoolShortCard from '../SchoolShortCard/SchoolShortCard';
 import './DistrictPage.css';
 
-function DistrictPage({ onGetServerData, onFindDistrict }) {
-  const [districts, setDistricts] = useState([]);
+function DistrictPage({
+  schools,
+  districts,
+  sports,
+  onFindDistrict,
+  onFindSports,
+}) {
+  const [schoolsData, setSchoolsData] = useState([]);
   const [district, setDistrict] = useState({});
-  const [schools, setSchools] = useState([]);
 
   let { id } = useParams();
 
   useEffect(() => {
-    const data = onGetServerData();
-
-    setSchools(filterByDistrict(data.schoolsData.schools, id));
-    setDistricts(data.districtsData.districts);
-    setDistrict(onFindDistrict(data.districtsData.districts, id));
-  }, []);
+    if (schools.length < 1 || districts.length < 1) {
+      return;
+    }
+    setSchoolsData(filterByDistrict(schools, id));
+    setDistrict(onFindDistrict(districts, id));
+  }, [schools, id, districts]);
 
   return (
     <section className="district-page">
       <div className="district-page__container">
         <h2 className="district-page__title">{district.name}</h2>
         <SchoolList>
-          {schools.map((school) => (
+          {schoolsData.map((school) => (
             <SchoolShortCard
               key={school.id}
               schoolData={school}
               onFindDistrict={onFindDistrict}
               districts={districts}
+              sports={sports}
+              onFindSports={onFindSports}
             />
           ))}
         </SchoolList>

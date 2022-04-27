@@ -23,18 +23,17 @@ export const getAllDistricts = () => {
     method: 'GET',
   }).then(checkResponse);
 };
-export const getTestData = () => {
-  return fetch('https://jsonplaceholder.typicode.com/posts', {
+
+export const getAllSports = () => {
+  return fetch(`${BASE_URL}/sports`, {
     headers,
     method: 'GET',
   }).then(checkResponse);
 };
 
-const BASE_URL2 = 'https://api.nomoreparties.co/beatfilm-movies';
-
-export const getAllMovies = () => {
-  return fetch(`${BASE_URL2}`, {
+export const getAllCoaches = () => {
+  return fetch(`${BASE_URL}/coaches`, {
     headers,
     method: 'GET',
-  }).then((res) => res.json());
+  }).then(checkResponse);
 };

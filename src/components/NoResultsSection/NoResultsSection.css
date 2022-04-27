@@ -1,0 +1,19 @@
+.no-results {
+  padding: 133px 70px;
+  max-width: 1280px;
+  width: 100%;
+  box-sizing: border-box;
+  background:  #FFFFFF;
+  border-radius: 8px;
+}
+
+.no-results__title {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.1;
+  color: black;
+  opacity: 0.75;
+  text-align: center;
+}

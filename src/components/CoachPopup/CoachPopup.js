@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import './CoachPopup.css';
 
-function CoachPopup({ isOpen, onClose }) {
+function CoachPopup({ isOpen, onClose, popupContent }) {
+  const { name, photo, description } = popupContent;
+
   useEffect(() => {
     if (!isOpen) return;
     const handleEscapeClose = (e) => {
@@ -27,15 +29,11 @@ function CoachPopup({ isOpen, onClose }) {
       className={`popup ${isOpen ? 'popup_opened' : ''}`}
     >
       <div className="popup__container">
-        <h2 className="popup__title">Алексеев Максим Евгеньевич</h2>
-        <p className="popup__text">Стаж</p>
-        <p className="popup__text">
-          Челябинская региональная общественная спортивная организация
-          «Челябинская областная федерация ушу» существует с 2000 года..
-          Челябинская региональная общественная спортивная организация
-          «Челябинская областная федерация ушу» существует с 2000 года..
-          Челябинская региональная общественная спортивная организация
-        </p>
+        <div className="popup__info-container">
+          <h2 className="popup__title">{name}</h2>
+          <img src={photo} alt="фото тренера" className="popup__image" />
+        </div>
+        <p className="popup__text">{description}</p>
         <button onClick={onClose} className="popup__button" type="button">
           Закрыть
         </button>

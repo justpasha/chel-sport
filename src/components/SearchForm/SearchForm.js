@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react';
 import { Link, Navigate, useMatch } from 'react-router-dom';
 import './SearchForm.css';
 
-function SearchForm({ districts, onFiltersChange }) {
+function SearchForm({ districts, onFiltersChange, sports }) {
   const [district, setDistrict] = useState('');
   const [school, setSchool] = useState('');
+  const [sport, setSport] = useState('');
   const [isSubmit, setIsSubmit] = useState(false);
 
   const isMain = useMatch('/');
@@ -18,14 +19,18 @@ function SearchForm({ districts, onFiltersChange }) {
     setDistrict(e.target.value);
   };
 
+  const handleSportChange = (e) => {
+    setSport(e.target.value);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    onFiltersChange(school, district);
+    onFiltersChange(school, district, sport);
     setIsSubmit(true);
   };
 
   const handleAllSchoolClick = () => {
-    onFiltersChange('', 'all');
+    onFiltersChange('', '', '');
   };
 
   const handleSchoolChange = (e) => {
@@ -44,19 +49,24 @@ function SearchForm({ districts, onFiltersChange }) {
       >
         <h2 className="search-form__title">Найдите школу по своим запросам!</h2>
         <div className="search-form__input-container">
-          <select className="search-form__input search-form__input_select search-form__input_select_sport">
-            <option>Вид спорта</option>
-            <option value="grapefruit">Грейпфрут</option>
-            <option value="lime">Лайм</option>
-            <option value="coconut">Кокос</option>
-            <option value="mango">Манго</option>
+          <select
+            onChange={handleSportChange}
+            value={sport}
+            className="search-form__input search-form__input_select search-form__input_select_sport"
+          >
+            <option value="">Все виды спорта</option>
+            {sports.map((s) => (
+              <option key={s.id} value={s.id.toString()}>
+                {s.name}
+              </option>
+            ))}
           </select>
           <select
             className="search-form__input search-form__input_select"
             value={district}
             onChange={handleDistrictChange}
           >
-            <option value="all">Все районы</option>
+            <option value="">Все районы</option>
             {districts.map((district) => (
               <option key={district.id} value={district.id.toString()}>
                 {district.name}

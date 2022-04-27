@@ -11,5 +11,11 @@ export const filterByDistrict = (schoolArr, districtId) => {
 };
 
 export const filterByHighRating = (schoolArr, rating) => {
-  return schoolArr.filter((school) => school.rating >= rating);
+  return schoolArr.filter((school) => Number(school.raiting) >= Number(rating));
+};
+
+export const filterBySport = (schoolArr, sportId) => {
+  return schoolArr.filter((school) =>
+    school.sport_id.includes(sportId.toString())
+  );
 };

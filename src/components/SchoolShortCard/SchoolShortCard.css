@@ -36,11 +36,38 @@
   position: relative;
 }
 
+.school-card__title-container {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 37px;
+}
+
 .school-card__title {
   font-weight: 600;
   font-size: 22px;
   line-height: 1.08;
-  margin: 0 0 37px;
+  margin: 0 10px 0 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 500px;
+}
+
+.school-card__raiting {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.095em;
+  color: #A7A7A7;
+  margin: 0;
+}
+
+.school-card__raiting_low {
+  color: #E57979;
+}
+
+.school-card__raiting_high {
+  color: #54CC6F;
 }
 
 .school-card__link {
@@ -71,6 +98,18 @@
   margin-bottom: 0;
 }
 
+.school-card__sports {
+  margin: 0 0 24px;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 500px;
+}
+
 .school-card__text_description {
   overflow: hidden;
 	text-overflow: ellipsis;
@@ -92,7 +131,6 @@
   color: #FFFFFF;
   text-align: center;
   transition: opacity 0.25s;
-  margin-top: 48px;
 }
 
 .school-card__button:hover {

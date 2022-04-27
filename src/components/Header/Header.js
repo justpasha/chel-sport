@@ -23,9 +23,9 @@ function Header() {
               О нас
             </NavLink>
           </nav>
-          <Link className="header__nav-link" to="/signin">
+          {/* <Link className="header__nav-link" to="/signin">
             Вход
-          </Link>
+          </Link> */}
         </div>
       </div>
     </header>

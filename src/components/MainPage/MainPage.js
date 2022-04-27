@@ -3,30 +3,43 @@ import SearchForm from '../SearchForm/SearchForm';
 import SchoolList from '../SchoolList/SchoolList';
 import SchoolShortCard from '../SchoolShortCard/SchoolShortCard';
 import './MainPage.css';
+import { filterByHighRating } from '../../utils/schoolFilters';
 
-function MainPage({ onGetServerData, onFindDistrict, onFiltersChange }) {
-  const [districts, setDistricts] = useState([]);
-  const [schools, setSchools] = useState([]);
+function MainPage({
+  schools,
+  districts,
+  sports,
+  onFindDistrict,
+  onFiltersChange,
+  onFindSports,
+}) {
+  const [schoolsData, setSchoolsData] = useState([]);
 
   useEffect(() => {
-    const data = onGetServerData();
-
-    setSchools(data.schoolsData.schools);
-    setDistricts(data.districtsData.districts);
-  }, []);
+    if (schools.length < 1) {
+      return;
+    }
+    setSchoolsData(filterByHighRating(schools, 4.2));
+  }, [schools]);
 
   return (
     <section className="main-page">
-      <SearchForm districts={districts} onFiltersChange={onFiltersChange} />
+      <SearchForm
+        sports={sports}
+        districts={districts}
+        onFiltersChange={onFiltersChange}
+      />
       <div className="main-page__container">
         <h2 className="main-page__title">Лучшие предложения</h2>
         <SchoolList>
-          {schools.map((school) => (
+          {schoolsData.map((school) => (
             <SchoolShortCard
               key={school.id}
               schoolData={school}
               onFindDistrict={onFindDistrict}
               districts={districts}
+              sports={sports}
+              onFindSports={onFindSports}
             />
           ))}
         </SchoolList>

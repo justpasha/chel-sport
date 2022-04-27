@@ -36,7 +36,8 @@
   font-weight: 600;
   font-size: 22px;
   line-height: 1.1;
-  margin: 0 0 18px;
+  margin: 0 25px 18px 0;
+  max-width: 250px;
 }
 
 .popup__text {
@@ -67,6 +68,21 @@
 .popup__button:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+
+.popup__info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.popup__image {
+  width: 170px;
+  height: 170px;
+  border-radius: 100px;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* @media screen and (max-width: 500px) {

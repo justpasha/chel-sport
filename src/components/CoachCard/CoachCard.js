@@ -1,16 +1,18 @@
-import coachPhoto from '../../images/coach-photo-example1.jpg';
 import './CoachCard.css';
 
-function CoachCard({ togglePopup }) {
+function CoachCard({ togglePopup, coachData, onPopupOpen }) {
+  const { name, photo, description } = coachData;
+
   function handleClick() {
+    onPopupOpen(name, photo, description);
     togglePopup();
   }
 
   return (
     <article className="coach">
       <button onClick={handleClick} type="button" className="coach__button">
-        <img src={coachPhoto} alt="фото" className="coach__image" />
-        <h2 className="coach__name">Алексеев Максим Евгеньевич</h2>
+        <img src={photo} alt="фото" className="coach__image" />
+        <h2 className="coach__name">{name}</h2>
       </button>
     </article>
   );
