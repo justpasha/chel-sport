@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Циклический",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 2,
+        "name": "Скоростно-силовой",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 3,
+        "name": "Сложнокоординационный",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 4,
+        "name": "Единоборства",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 5,
+        "name": "Командные игры",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 6,
+        "name": "Многоборье",
+        "created_at": null,
+        "updated_at": null
+    }
+]

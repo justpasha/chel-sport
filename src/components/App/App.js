@@ -10,6 +10,11 @@ import Schools from '../Schools/Schools';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import './App.css';
 
+import schoolJsonArr from '../../utils/schools.json';
+import districtJsonArr from '../../utils/districts.json';
+import sportJsonArr from '../../utils/sports.json';
+import coachJsonArr from '../../utils/coaches.json';
+
 function App() {
   const [schools, setSchools] = useState([]);
   const [districts, setDistricts] = useState([]);
@@ -28,6 +33,8 @@ function App() {
         setSchools(schoolsData.data);
       })
       .catch((err) => {
+        const schoolData = JSON.parse(JSON.stringify(schoolJsonArr));
+        setSchools(schoolData.data);
         console.log(err);
       });
 
@@ -37,6 +44,8 @@ function App() {
         setCoaches(coachesData.data);
       })
       .catch((err) => {
+        const coachData = JSON.parse(JSON.stringify(coachJsonArr));
+        setCoaches(coachData.data);
         console.log(err);
       });
 
@@ -51,6 +60,7 @@ function App() {
           );
         })
         .catch((err) => {
+          setDistricts(JSON.parse(JSON.stringify(districtJsonArr)));
           console.log(err);
         });
     } else {
@@ -69,6 +79,7 @@ function App() {
           );
         })
         .catch((err) => {
+          setSports(JSON.parse(JSON.stringify(sportJsonArr)));
           console.log(err);
         });
     } else {
