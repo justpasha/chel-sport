@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/chel-sport/static/css/main.cf64ef31.css",
-    "main.js": "/chel-sport/static/js/main.fc10ba5c.js",
-    "static/js/787.683f7e9a.chunk.js": "/chel-sport/static/js/787.683f7e9a.chunk.js",
-    "static/media/main-photo.jpg": "/chel-sport/static/media/main-photo.1fa3155e1ef1ee34a375.jpg",
-    "static/media/main-photo-schools.jpg": "/chel-sport/static/media/main-photo-schools.5703dbed5a908ea3d3c5.jpg",
-    "index.html": "/chel-sport/index.html",
-    "main.cf64ef31.css.map": "/chel-sport/static/css/main.cf64ef31.css.map",
-    "main.fc10ba5c.js.map": "/chel-sport/static/js/main.fc10ba5c.js.map",
-    "787.683f7e9a.chunk.js.map": "/chel-sport/static/js/787.683f7e9a.chunk.js.map"
+    "main.css": "/static/css/main.35a23efd.css",
+    "main.js": "/static/js/main.77dec165.js",
+    "static/js/787.683f7e9a.chunk.js": "/static/js/787.683f7e9a.chunk.js",
+    "static/media/main-photo.jpg": "/static/media/main-photo.1fa3155e1ef1ee34a375.jpg",
+    "static/media/main-photo-schools.jpg": "/static/media/main-photo-schools.5703dbed5a908ea3d3c5.jpg",
+    "index.html": "/index.html",
+    "main.35a23efd.css.map": "/static/css/main.35a23efd.css.map",
+    "main.77dec165.js.map": "/static/js/main.77dec165.js.map",
+    "787.683f7e9a.chunk.js.map": "/static/js/787.683f7e9a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf64ef31.css",
-    "static/js/main.fc10ba5c.js"
+    "static/css/main.35a23efd.css",
+    "static/js/main.77dec165.js"
   ]
 }
