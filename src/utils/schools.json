@@ -12,7 +12,7 @@
           "coach_id": "10",
           "coordinates": "55.150551, 61.379063",
           "raiting": "3.9",
-          "img": "http://127.0.0.1:8000/storage/images/schools/school-id-1.png",
+          "img": "school-id-1.png",
           "created_at": null
       },
       {
@@ -27,7 +27,7 @@
           "coach_id": "",
           "coordinates": "55.188319, 61.335728",
           "raiting": "4.1",
-          "img": "http://127.0.0.1:8000/storage/images/schools/school-id-2.png",
+          "img": "school-id-2.png",
           "created_at": null
       },
       {
@@ -42,7 +42,7 @@
           "coach_id": "",
           "coordinates": "55.190313, 61.355230",
           "raiting": "4.3",
-          "img": "http://127.0.0.1:8000/storage/images/schools/school-id-3.jpg",
+          "img": "school-id-3.jpg",
           "created_at": null
       },
       {
@@ -57,7 +57,7 @@
           "coach_id": "",
           "coordinates": "55.180480, 61.328191",
           "raiting": "2.1",
-          "img": "http://127.0.0.1:8000/storage/images/schools/school-id-4.jpg",
+          "img": "school-id-4.jpg",
           "created_at": null
       },
       {
@@ -72,7 +72,7 @@
           "coach_id": "",
           "coordinates": "55.168506, 61.375074",
           "raiting": "4.3",
-          "img": "http://127.0.0.1:8000/storage/images/schools/school-id-5.png",
+          "img": "school-id-5.png",
           "created_at": null
       },
       {
@@ -87,7 +87,7 @@
           "coach_id": "",
           "coordinates": "55.160905, 61.362839",
           "raiting": "4.3",
-          "img": "http://127.0.0.1:8000/storage/images/schools/school-id-6.png",
+          "img": "school-id-6.png",
           "created_at": null
       },
       {
@@ -102,7 +102,7 @@
           "coach_id": "",
           "coordinates": "55.178234, 61.446194",
           "raiting": "3.7",
-          "img": "http://127.0.0.1:8000/storage/images/schools/school-id-7.png",
+          "img": "school-id-7.png",
           "created_at": null
       },
       {
@@ -117,7 +117,7 @@
           "coach_id": "",
           "coordinates": "55.164500, 61.447963",
           "raiting": "4.6",
-          "img": "http://127.0.0.1:8000/storage/images/schools/school-id-8.png",
+          "img": "school-id-8.png",
           "created_at": null
       },
       {
@@ -132,7 +132,7 @@
           "coach_id": "",
           "coordinates": "55.159311, 61.412732",
           "raiting": "4.7",
-          "img": "http://127.0.0.1:8000/storage/images/schools/school-id-9.png",
+          "img": "school-id-9.png",
           "created_at": null
       },
       {
@@ -147,7 +147,7 @@
           "coach_id": "",
           "coordinates": "55.156271, 61.413989",
           "raiting": "4.4",
-          "img": "http://127.0.0.1:8000/storage/images/schools/school-id-10.png",
+          "img": "school-id-10.png",
           "created_at": null
       },
       {
@@ -162,7 +162,7 @@
           "coach_id": "",
           "coordinates": "55.243444, 61.379844",
           "raiting": "4.4",
-          "img": "http://127.0.0.1:8000/storage/images/schools/school-id-11.png",
+          "img": "school-id-11.png",
           "created_at": null
       },
       {
@@ -177,7 +177,7 @@
           "coach_id": "",
           "coordinates": "55.245943, 61.363333",
           "raiting": "4.2",
-          "img": "http://127.0.0.1:8000/storage/images/schools/school-id-12.png",
+          "img": "school-id-12.png",
           "created_at": null
       },
       {
@@ -192,7 +192,7 @@
           "coach_id": "",
           "coordinates": "55.260290, 61.392942",
           "raiting": "3.7",
-          "img": "http://127.0.0.1:8000/storage/images/schools/school-id-13.png",
+          "img": "school-id-13.png",
           "created_at": null
       },
       {
@@ -207,7 +207,7 @@
           "coach_id": "",
           "coordinates": "55.240159, 61.373008",
           "raiting": "4.6",
-          "img": "http://127.0.0.1:8000/storage/images/schools/school-id-14.png",
+          "img": "school-id-14.png",
           "created_at": null
       },
       {
@@ -222,7 +222,7 @@
           "coach_id": "",
           "coordinates": "55.110970, 61.461627",
           "raiting": "4.6",
-          "img": "http://127.0.0.1:8000/storage/images/schools/school-id-15.png",
+          "img": "school-id-15.png",
           "created_at": null
       },
       {
@@ -237,7 +237,7 @@
           "coach_id": "",
           "coordinates": "55.097393, 61.491397",
           "raiting": "4.1",
-          "img": "http://127.0.0.1:8000/storage/images/schools/school-id-16.jpg",
+          "img": "school-id-16.jpg",
           "created_at": null
       },
       {
@@ -252,7 +252,7 @@
           "coach_id": "",
           "coordinates": "55.188149, 61.291288",
           "raiting": "4",
-          "img": "http://127.0.0.1:8000/storage/images/schools/school-id-17.png",
+          "img": "school-id-17.png",
           "created_at": null
       },
       {
@@ -267,7 +267,7 @@
           "coach_id": "",
           "coordinates": "55.175051, 61.345834",
           "raiting": "3.6",
-          "img": "http://127.0.0.1:8000/storage/images/schools/school-id-18.png",
+          "img": "school-id-18.png",
           "created_at": null
       },
       {
@@ -282,7 +282,7 @@
           "coach_id": "",
           "coordinates": "55.191587, 61.348673",
           "raiting": "3.9",
-          "img": "http://127.0.0.1:8000/storage/images/schools/school-id-19.jpg",
+          "img": "school-id-19.jpg",
           "created_at": null
       },
       {
@@ -297,7 +297,7 @@
           "coach_id": "",
           "coordinates": "55.155489, 61.388414",
           "raiting": "4.3",
-          "img": "http://127.0.0.1:8000/storage/images/schools/school-id-20.png",
+          "img": "school-id-20.png",
           "created_at": null
       }
   ]

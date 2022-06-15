@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import photoExample from '../../images/school-id-16.jpg';
 import './SchoolShortCard.css';
 
 function SchoolShortCard({
@@ -47,7 +48,7 @@ function SchoolShortCard({
   return (
     <article className="school-card">
       <Link className="school-card__school-link" to={schoolPath}>
-        <img className="school-card__photo" src={img} alt="фото" />
+        <img className="school-card__photo" src={photoExample} alt="фото" />
       </Link>
       <div className="school-card__info-container">
         <Link

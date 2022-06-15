@@ -26,67 +26,76 @@ function App() {
     sport: '',
   });
 
+  //без сервера
   useEffect(() => {
-    mainApi
-      .getAllSchools()
-      .then((schoolsData) => {
-        setSchools(schoolsData.data);
-      })
-      .catch((err) => {
-        const schoolData = JSON.parse(JSON.stringify(schoolJsonArr));
-        setSchools(schoolData.data);
-        console.log(err);
-      });
-
-    mainApi
-      .getAllCoaches()
-      .then((coachesData) => {
-        setCoaches(coachesData.data);
-      })
-      .catch((err) => {
-        const coachData = JSON.parse(JSON.stringify(coachJsonArr));
-        setCoaches(coachData.data);
-        console.log(err);
-      });
-
-    if (!localStorage.getItem('districtsData')) {
-      mainApi
-        .getAllDistricts()
-        .then((districtsData) => {
-          setDistricts(districtsData);
-          localStorage.setItem(
-            'districtsData',
-            JSON.stringify({ districts: districtsData })
-          );
-        })
-        .catch((err) => {
-          setDistricts(JSON.parse(JSON.stringify(districtJsonArr)));
-          console.log(err);
-        });
-    } else {
-      const districtData = JSON.parse(localStorage.getItem('districtsData'));
-      setDistricts(districtData.districts);
-    }
-
-    if (!localStorage.getItem('sportsData')) {
-      mainApi
-        .getAllSports()
-        .then((sportsData) => {
-          setSports(sportsData);
-          localStorage.setItem(
-            'sportsData',
-            JSON.stringify({ sports: sportsData })
-          );
-        })
-        .catch((err) => {
-          setSports(JSON.parse(JSON.stringify(sportJsonArr)));
-          console.log(err);
-        });
-    } else {
-      const sportstData = JSON.parse(localStorage.getItem('sportsData'));
-      setSports(sportstData.sports);
-    }
+    setSchools(JSON.parse(JSON.stringify(schoolJsonArr)).data);
+    setCoaches(JSON.parse(JSON.stringify(coachJsonArr)).data);
+    setDistricts(JSON.parse(JSON.stringify(districtJsonArr)));
+    setSports(JSON.parse(JSON.stringify(sportJsonArr)));
   }, []);
+
+  //данные с сервера
+  // useEffect(() => {
+  //   mainApi
+  //     .getAllSchools()
+  //     .then((schoolsData) => {
+  //       setSchools(schoolsData.data);
+  //     })
+  //     .catch((err) => {
+  //       const schoolData = JSON.parse(JSON.stringify(schoolJsonArr));
+  //       setSchools(schoolData.data);
+  //       console.log(err);
+  //     });
+
+  //   mainApi
+  //     .getAllCoaches()
+  //     .then((coachesData) => {
+  //       setCoaches(coachesData.data);
+  //     })
+  //     .catch((err) => {
+  //       const coachData = JSON.parse(JSON.stringify(coachJsonArr));
+  //       setCoaches(coachData.data);
+  //       console.log(err);
+  //     });
+
+  //   if (!localStorage.getItem('districtsData')) {
+  //     mainApi
+  //       .getAllDistricts()
+  //       .then((districtsData) => {
+  //         setDistricts(districtsData);
+  //         localStorage.setItem(
+  //           'districtsData',
+  //           JSON.stringify({ districts: districtsData })
+  //         );
+  //       })
+  //       .catch((err) => {
+  //         setDistricts(JSON.parse(JSON.stringify(districtJsonArr)));
+  //         console.log(err);
+  //       });
+  //   } else {
+  //     const districtData = JSON.parse(localStorage.getItem('districtsData'));
+  //     setDistricts(districtData.districts);
+  //   }
+
+  //   if (!localStorage.getItem('sportsData')) {
+  //     mainApi
+  //       .getAllSports()
+  //       .then((sportsData) => {
+  //         setSports(sportsData);
+  //         localStorage.setItem(
+  //           'sportsData',
+  //           JSON.stringify({ sports: sportsData })
+  //         );
+  //       })
+  //       .catch((err) => {
+  //         setSports(JSON.parse(JSON.stringify(sportJsonArr)));
+  //         console.log(err);
+  //       });
+  //   } else {
+  //     const sportstData = JSON.parse(localStorage.getItem('sportsData'));
+  //     setSports(sportstData.sports);
+  //   }
+  // }, []);
 
   function findCoach(coachesArr, schoolId) {
     return coachesArr.filter(
